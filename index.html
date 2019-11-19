@@ -38,12 +38,12 @@
     <!--?--------------------FINISHED HEAD--------------------? -->
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#main-nav" id="home">
     <!--?--------------------BEGIN BODY--------------------? -->
 
     <!--*--------------------BEGIN NAVIGATION--------------------*-->
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
       <div class="container">
         <a href="index.html" class="navbar-brand">LoopLAP</a>
         <button
@@ -436,6 +436,11 @@
     <script>
       // Get the current year for the copyright
       $("#year").text(new Date().getFullYear());
+
+      // Init Scrollspy
+
+      $('body').scrollspy({target: '#main-nav'})
+    
     </script>
 
     <!--!--------------------FINISHED SCRIPTS--------------------!-->
